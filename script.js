@@ -14,7 +14,7 @@ function searchCallback(results) {
     	var picture = results[i].image.medium_url;
     	var deck = results[i].deck;
     	var game = results[i].site_detail_url;
-    	    $(".middle").append("<div class='hidden container well col-md-4 col-xs-12' id='mainWindow'><div class='hidden-sm hidden-xs' id='gameImage'><img src='" + picture + "'/></div><div class='outer' id='gameTitle'><p class='lead text-center'>" + results[i].name + "</p></div><p id='textHidden'>" + results[i].deck + "<br><a href='" + game + "' target='_blank'>Take me there</a></p></div>");
+    	    $(".middle").append("<div class='mainWindow hidden container well'><div class='hidden-sm hidden-xs' id='gameImage'><img src='" + picture + "'/></div><div class='outer' id='gameTitle'><p class='lead text-center'>" + results[i].name + "</p></div><p id='textHidden'>" + results[i].deck + "<br><a href='" + game + "' target='_blank'>Take me there</a></p></div>");
 	}
 	$(".row").append('<div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>');
 	display();

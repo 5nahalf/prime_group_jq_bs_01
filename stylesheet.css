@@ -11,8 +11,10 @@
 body {
 	background-color: #1E1E20;
 }
-#mainWindow {
-	height: 100%;
+.mainWindow {
+/*	height: 100%;*/
+	width: 250px;
+	margin: 2em auto;
 }
 p {
 	color: #DC6F00;
@@ -33,20 +35,27 @@ img {
 	overflow: auto;
 }
 #returnGame {
+	width: 100%;
 	height: 500px;
 	background-color: #374140;
 }
 .pull1 {
 	width: 50px;
-	height: 400px;
+	height: 50px;
 	background-color: #ffffff;
 	float: left;
+	display: block;
+	text-align: center;
+	padding-top: 15px;
 }
 .pull2 {
 	width: 50px;
-	height: 400px;
+	height: 50px;
 	background-color: #ffffff;
 	float: right;
+	display: block;
+	text-align: center;
+	padding-top: 15px;
 }
 .dot {
 	border-radius: 50%;
@@ -54,13 +63,17 @@ img {
 	width: 10px;
 	background-color: #000;
 	display: inline-block;
+	margin-right: 6px;
 }
 .row {
-	margin-top: 450px;
-	width: 12%;
-	margin-left: auto;
-	margin-right: auto;
+	width: 128px;
+	margin: 2em auto;
 }
 .rowDot {
 	background-color: #747275;
 }
+/*.middle {
+
+	margin-left: auto;
+	margin-right: auto;
+}*/

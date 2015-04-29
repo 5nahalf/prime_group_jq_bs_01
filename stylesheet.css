@@ -30,3 +30,19 @@ img {
 	height: 75px;
 	overflow: auto;
 }
+#returnGame {
+	height: 500px;
+	background-color: #374140;
+}
+.pull1 {
+	width: 50px;
+	height: 400px;
+	background-color: #ffffff;
+	float: left;
+}
+.pull2 {
+	width: 50px;
+	height: 400px;
+	background-color: #ffffff;
+	float: right;
+}

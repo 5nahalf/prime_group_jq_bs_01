@@ -2,6 +2,8 @@ var apikey = 'fbf1f9033c363564ebbbfddfee9708bc18e08cb0'; // Put your API key her
 var game;
 var i = 0;
 var resultsGame = [];
+var currentPos = 0;
+var currentChild;
 // Use this function to do stuff with your results. 
 // It is called after 'search' is executed.
 function searchCallback(results) {
@@ -13,13 +15,40 @@ function searchCallback(results) {
     	var deck = results[i].deck;
     	var game = results[i].site_detail_url;
     	resultsGame.push(results[i]);
-    	display(results[i]);
+    	// display(results[i]);
+    	    	$(".middle").append("<div class='hidden container well col-md-4 col-xs-12' id='mainWindow'><div class='hidden-sm hidden-xs' id='gameImage'><img src='" + picture + "'/></div><div class='outer' id='gameTitle'><p class='lead text-center'>" + results[i].name + "</p></div><p id='textHidden'>" + results[i].deck + "<br><a href='" + game + "' target='_blank'>Take me there</a></p><button class='btn-sm btn-primary' id='removeGame'>Remove Game</button></div>");
 	}
-	console.log(resultsGame);
+	console.log($(".middle").children().first());
+	display();
 }
 
-function display(array){
+function display(){
+	currentChild = $(".middle").children().first();
+	currentChild.removeClass("hidden");
+}
 
+
+function right(){
+	currentChild.addClass("hidden");
+	if(currentPos == 7){
+		currentChild = $(".middle").children().first();
+		currentPos = 0;
+	} else {
+	currentChild = currentChild.next();
+}
+	currentChild.removeClass("hidden");
+	currentPos++;
+}
+function left(){
+	currentChild.addClass("hidden");
+	if(currentPos == 0){
+		currentChild = $(".middle").children().last();
+		currentPos = 7;
+	} else {
+	currentChild = currentChild.prev();
+}
+	currentChild.removeClass("hidden");
+	currentPos--;
 }
 
 
@@ -37,6 +66,12 @@ $(document).ready(function() {
 	});
 	$("#returnGame").on("click", "#removeGame", function(){
 		$(this).parent().fadeOut();
+	});
+	$(".pull2").on("click", function(){
+		right();
+	});
+	$(".pull1").on("click", function(){
+		left();
 	});
 	
 

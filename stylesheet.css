@@ -1,0 +1,32 @@
+.well {
+	background-color: #2A2C2B;
+
+}
+.outer {
+	background-color: #374140;
+	border-radius: 2px;
+}
+body {
+	background-color: #1E1E20;
+}
+#mainWindow {
+	height: 100%;
+}
+p {
+	color: #DC6F00;
+}
+.btn, .btn-sm {
+	color: #008ED9;
+}
+img {
+	height: 200px;
+	width: 200px;
+}
+#searchBox {
+	font-weight: bold;
+	display: inline-block;
+}
+#textHidden {
+	height: 75px;
+	overflow: auto;
+}

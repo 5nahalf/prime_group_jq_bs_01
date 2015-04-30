@@ -12,7 +12,7 @@ body {
 	background-color: #1E1E20;
 }
 .mainWindow {
-/*	height: 100%;*/
+	height: 400px;
 	width: 250px;
 	margin: 2em auto;
 }
@@ -63,7 +63,7 @@ img {
 	width: 10px;
 	background-color: #000;
 	display: inline-block;
-	margin-right: 6px;
+	margin-left: 2px;
 }
 .row {
 	width: 128px;
@@ -72,8 +72,3 @@ img {
 .rowDot {
 	background-color: #747275;
 }
-/*.middle {
-
-	margin-left: auto;
-	margin-right: auto;
-}*/

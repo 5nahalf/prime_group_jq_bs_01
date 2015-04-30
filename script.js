@@ -1,11 +1,9 @@
-var apikey = 'fbf1f9033c363564ebbbfddfee9708bc18e08cb0'; // Put your API key here
+var apikey = 'fbf1f9033c363564ebbbfddfee9708bc18e08cb0';
 var game;
 var i = 0;
 var currentPos = 0;
 var currentChild;
 var currentDot;
-// Use this function to do stuff with your results. 
-// It is called after 'search' is executed.
 function searchCallback(results) {
         $(".middle").empty();
 		$(".row").empty();
@@ -93,5 +91,4 @@ function search(query){
 	        searchCallback(data.results);
 	    }
 	});
-
 }
